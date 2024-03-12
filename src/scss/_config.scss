@@ -1,0 +1,54 @@
+$primary-red: hsl(1, 90%, 64%);
+$primary-blue: hsl(219, 85%, 26%);
+
+$neutral-white: hsl(0, 0%, 100%);
+$neutral-very-light-grayish-blue: hsl(210, 60%, 98%);
+$neutral-light-grayish-blue-1: hsl(211, 68%, 94%);
+$neutral-light-grayish-blue-2: hsl(205, 33%, 90%);
+$neutral-grayish-blue: hsl(219, 14%, 63%);
+$neutral-dark-grayish-blue: hsl(219, 12%, 42%);
+$neutral-very-dark-blue: hsl(224, 21%, 14%);
+
+@font-face {
+  font-family: "PlusJarkata";
+  src: url("/src/assets/fonts/PlusJakartaSans-VariableFont_wght.ttf")
+    format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  font-family: "PlusJarkata", sans-serif;
+}
+@mixin flex-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin media-xsm() {
+  @media screen and (min-width: 575px) {
+    @content;
+  }
+}
+@mixin media-sm() {
+  @media screen and (min-width: 640px) {
+    @content;
+  }
+}
+@mixin media-md() {
+  @media screen and (min-width: 767px) {
+    @content;
+  }
+}
+@mixin media-lg() {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin media-lg() {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}

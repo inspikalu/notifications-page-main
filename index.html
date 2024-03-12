@@ -1,51 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Notifications page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/src/styles/styles.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Notifications page</title>
+  </head>
+  <body>
+    <!-- Notifications 3 Mark all as read Mark Webber reacted to your recent post My
+    first tournament today! 1m ago Angela Gray followed you 5m ago Jacob
+    Thompson has joined your group Chess Club 1 day ago Rizky Hasanuddin sent
+    you a private message 5 days ago Hello, thanks for setting up the Chess
+    Club. I've been a member for a few weeks now and I'm already having lots of
+    fun and improving my game. Kimberly Smith commented on your picture 1 week
+    ago Nathan Peterson reacted to your recent post 5 end-game strategies to
+    increase your win rate 2 weeks ago Anna Kim left the group Chess Club 2
+    weeks ago -->
 
-  Notifications 3
+    <section class="notification">
+      <div class="notification__header">
+        <div>
+          <h1>Notifications</h1>
+          <span class="badge"></span>
+        </div>
 
-  Mark all as read
+        <button class="markAsRead">Mark all as read</button>
+      </div>
 
-  Mark Webber reacted to your recent post My first tournament today!
-  1m ago
+      <div class="notification__body">
+        <div class="notification__body__item unread">
+          <img src="/src/assets/images/avatar-mark-webber.webp" alt="" />
+          <div class="text">
+            <span class="who">Mark Webber</span> reacted to your recent post
+            <span class="post mark"> My first tournament today!</span>
+          </div>
+          <span class="time">1m ago</span>
+        </div>
 
-  Angela Gray followed you
-  5m ago
+        <div class="notification__body__item unread">
+          <img src="/src/assets/images/avatar-angela-gray.webp" alt="" />
+          <div class="text">
+            <span class="who">Angela Gray</span> followed you
+          </div>
+          <span class="time">5m ago</span>
+        </div>
 
-  Jacob Thompson has joined your group Chess Club
-  1 day ago
+        <div class="notification__body__item unread">
+          <img src="/src/assets/images/avatar-jacob-thompson.webp" alt="" />
+          <div class="text">
+            <span class="who">Jacob Thompson</span> has joined your group
+            <span class="group">Chess Club</span>
+          </div>
+          <span class="time">1 day ago</span>
+        </div>
 
-  Rizky Hasanuddin sent you a private message
-  5 days ago
-  Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
-  I'm already having lots of fun and improving my game.
+        <div class="notification__body__item">
+          <img src="/src/assets/images/avatar-rizky-hasanuddin.webp" alt="" />
+          <div class="text">
+            <span class="who">Rizky Hasanuddin</span> sent you a private message
+          </div>
+          <span class="time">5 days ago</span>
+          <div></div>
+          <div class="message">
+            Hello, thanks for setting up the Chess Club. I've been a member for
+            a few weeks now and I'm already having lots of fun and improving my
+            game.
+          </div>
+        </div>
 
-  Kimberly Smith commented on your picture
-  1 week ago
+        <div class="notification__body__item">
+          <img src="/src/assets/images/avatar-kimberly-smith.webp" alt="" />
+          <div class="text w-image">
+            <span class="who">Kimberly Smith</span> commented on your picture
+            <img
+              src="/src/assets/images/image-chess.webp"
+              alt="Girl playing Chess"
+            />
+          </div>
+          <span class="time">1 week ago</span>
+        </div>
 
-  Nathan Peterson reacted to your recent post 5 end-game strategies to increase your win rate
-  2 weeks ago
+        <div class="notification__body__item">
+          <img src="/src/assets/images/avatar-nathan-peterson.webp" alt="" />
+          <div class="text">
+            <span class="who">Nathan Peterson</span> reacted to your recent post
+            <span class="post"
+              >5 end-game strategies to increase your win rate</span
+            >
+          </div>
+          <span class="time">2 weeks ago</span>
+        </div>
 
-  Anna Kim left the group Chess Club
-  2 weeks ago
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <div class="notification__body__item">
+          <img src="/src/assets/images/avatar-anna-kim.webp" alt="" />
+          <div class="text">
+            <span class="who">Anna Kim</span> left the group
+            <span class="group">Chess Club</span>
+          </div>
+          <span class="time">2 weeks ago</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="attribution">
+      Challenge by
+      <a
+        rel="noopener norefferer"
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://www.twitter.com/inspiklau/"
+        target="_blank"
+        rel="noopener norefferer"
+        >Inspikalu</a
+      >.
+    </div>
+
+    <script src="/src/script.js"></script>
+  </body>
 </html>

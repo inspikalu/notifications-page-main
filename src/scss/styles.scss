@@ -1,0 +1,20 @@
+@import "config";
+@import "notifications";
+@import "responsive";
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  min-height: 100vh;
+  background-color: $neutral-very-light-grayish-blue;
+  @include flex-center;
+  flex-direction: column;
+  margin-block: 1rem;
+  gap: 10px;
+}

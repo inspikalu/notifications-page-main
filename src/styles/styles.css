@@ -1,0 +1,180 @@
+@font-face {
+  font-family: "PlusJarkata";
+  src: url("/src/assets/fonts/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  font-family: "PlusJarkata", sans-serif;
+}
+
+@font-face {
+  font-family: "PlusJarkata";
+  src: url("/src/assets/fonts/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  font-family: "PlusJarkata", sans-serif;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-inline: 19px;
+  padding-block: 12px;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.545);
+  width: 88%;
+}
+.notification__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.notification__header > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.notification__header > div span {
+  display: block;
+  padding: 6px 15px;
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bolder;
+  background-color: hsl(219, 85%, 26%);
+}
+.notification__header button {
+  background-color: transparent;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+.notification__header button:hover {
+  font-weight: bold;
+  color: hsl(219, 85%, 26%);
+}
+.notification__body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 13px;
+  flex-direction: column;
+}
+.notification__body__item {
+  display: grid;
+  grid-template-columns: clamp(15px, 3rem, 4.5rem) 2fr;
+  grid-template-areas: "img desc" "img date";
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 5px;
+  width: 100%;
+}
+.notification__body__item.unread {
+  background-color: hsl(205, 33%, 90%);
+}
+.notification__body__item > img {
+  grid-area: img;
+  width: 100%;
+  height: auto;
+}
+.notification__body__item > .text {
+  grid-area: desc;
+  align-self: flex-end;
+}
+.notification__body__item > .text .who,
+.notification__body__item > .text .post,
+.notification__body__item > .text .group {
+  font-size: larger;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.notification__body__item > .time {
+  grid-area: date;
+  align-self: flex-start;
+}
+.notification__body__item > .message {
+  border: 1px solid hsl(219, 12%, 42%);
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.unread > .text::after {
+  content: " ";
+  display: inline-block;
+  background-color: hsl(1, 90%, 64%);
+  width: 0.7rem;
+  vertical-align: middle;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.w-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.w-image img {
+  margin-left: auto;
+  width: clamp(15px, 3rem, 4.5rem);
+}
+
+.group {
+  color: hsl(219, 85%, 26%);
+}
+
+.post {
+  color: hsl(219, 12%, 42%);
+}
+
+@font-face {
+  font-family: "PlusJarkata";
+  src: url("/src/assets/fonts/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  font-family: "PlusJarkata", sans-serif;
+}
+
+@media screen and (min-width: 767px) {
+  .notification {
+    width: 70%;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  min-height: 100vh;
+  background-color: hsl(210, 60%, 98%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-block: 1rem;
+  gap: 10px;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,121 @@
+@import "config";
+
+.notification {
+  @include flex-center;
+  flex-direction: column;
+  padding-inline: 19px;
+  padding-block: 12px;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.545);
+  width: 88%;
+
+  &__header {
+    width: 100%;
+    @include flex-center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    & > div {
+      @include flex-center;
+      gap: 10px;
+
+      span {
+        display: block;
+        padding: 6px 15px;
+        color: $neutral-white;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bolder;
+        background-color: $primary-blue;
+      }
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+      font: inherit;
+      cursor: pointer;
+
+      &:hover {
+        font-weight: bold;
+        color: $primary-blue;
+      }
+    }
+  }
+
+  &__body {
+    @include flex-center;
+    width: 100%;
+    gap: 13px;
+    flex-direction: column;
+
+    &__item {
+      display: grid;
+      grid-template-columns: clamp(15px, 3rem, 4.5rem) 2fr;
+      grid-template-areas: "img desc" "img date";
+      gap: 8px;
+      &.unread {
+        background-color: $neutral-light-grayish-blue-2;
+      }
+      padding: 6px 8px;
+      border-radius: 5px;
+      width: 100%;
+
+      & > img {
+        grid-area: img;
+        width: 100%;
+        height: auto;
+      }
+      & > .text {
+        grid-area: desc;
+        align-self: flex-end;
+
+        .who,
+        .post,
+        .group {
+          font-size: larger;
+          font-weight: bolder;
+          cursor: pointer;
+        }
+      }
+
+      & > .time {
+        grid-area: date;
+        align-self: flex-start;
+      }
+
+      & > .message {
+        border: 1px solid $neutral-dark-grayish-blue;
+        border-radius: 5px;
+        padding: 8px;
+      }
+    }
+  }
+}
+
+.unread > .text::after {
+  content: " ";
+  display: inline-block;
+  background-color: $primary-red;
+  width: 0.7rem;
+  vertical-align: middle;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.w-image {
+  @include flex-center;
+  gap: 10px;
+  img {
+    margin-left: auto;
+    width: clamp(15px, 3rem, 4.5rem);
+  }
+}
+
+.group {
+  color: $primary-blue;
+}
+.post {
+  color: $neutral-dark-grayish-blue;
+}
