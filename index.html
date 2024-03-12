@@ -30,7 +30,7 @@
       <div class="notification__header">
         <div>
           <h1>Notifications</h1>
-          <span class="badge"></span>
+          <span class="badge">3</span>
         </div>
 
         <button class="markAsRead">Mark all as read</button>
@@ -127,6 +127,21 @@
       >.
     </div>
 
-    <script src="/src/script.js"></script>
+    <script>
+      const markAsRead = document.querySelector(".markAsRead");
+      const unread = document.querySelectorAll(
+        ".notification__body__item.unread"
+      );
+      const badge = document.querySelector(".badge");
+
+      badge.innerHTML = unread.length;
+
+      markAsRead.addEventListener("click", () => {
+        unread.forEach(function (item, index) {
+          item.classList.remove("unread");
+        });
+        badge.style.display = "none";
+      });
+    </script>
   </body>
 </html>
